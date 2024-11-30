@@ -1,7 +1,8 @@
-﻿namespace SportPit.Models;
+﻿using Microsoft.AspNetCore.Identity;
 
-public class User
+namespace SportPit.Models;
+
+public class User : IdentityUser
 {
-    public int Id { get; set; }
-    public required string UserName { get; set; }
+    
 }

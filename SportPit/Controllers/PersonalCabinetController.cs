@@ -10,7 +10,7 @@ public class PersonalCabinetController(
 {
     public async Task<IActionResult> Index()
     {
-        var user = await userRepository.GetUserByIdAsync(1);
+        var user = await userRepository.GetUserByIdAsync("1");
         var carts = await cartRepository.GetCartsDetailsByUserAsync(user);
 
         var userCabinet = new UserCabinet

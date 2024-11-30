@@ -7,6 +7,6 @@ namespace SportPit.Repositories;
 
 public class UserRepository(ApplicationContext context) : IUserRepository
 {
-    public Task<User> GetUserByIdAsync(int id) =>
+    public Task<User> GetUserByIdAsync(string id) =>
         context.Users.SingleAsync(user => user.Id == id);
 }

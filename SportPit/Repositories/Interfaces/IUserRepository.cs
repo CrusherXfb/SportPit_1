@@ -4,5 +4,5 @@ namespace SportPit.Repositories.Interfaces;
 
 public interface IUserRepository
 {
-    Task<User> GetUserByIdAsync(int id);
+    Task<User> GetUserByIdAsync(string id);
 }

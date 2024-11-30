@@ -26,7 +26,7 @@ public class CartController(
     {
         var products = await productRepository
             .GetProductsByListIdAsync(orderRepository.CountProductsByProductId.Keys.Select(x => x.Id).ToList());
-        var user = await userRepository.GetUserByIdAsync(1);
+        var user = await userRepository.GetUserByIdAsync("1");
         await cartRepository.AddAsync(products, user, DateOnly.FromDateTime(DateTime.Now), orderRepository.Sum);
 
         orderRepository.Clear();
